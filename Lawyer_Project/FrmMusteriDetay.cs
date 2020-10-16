@@ -54,13 +54,6 @@ namespace Lawyer_Project
             comboBox1.DataSource = dt2;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FrmMusteriBilgiGuncelle fr = new FrmMusteriBilgiGuncelle();
-            fr.tc = LblTC.Text;
-            fr.Show();
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM TBLDAVA WHERE DAVATUR=@P1", bgl.baglanti());
@@ -71,14 +64,6 @@ namespace Lawyer_Project
                 label2.Text = dr[2].ToString();
             }
             bgl.baglanti().Close();
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FrmMesajMusteri fr = new FrmMesajMusteri();
-            fr.TC = LblTC.Text;
-            fr.ADSOYAD = LblAdSoyad.Text.ToUpper();
-            fr.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,24 +89,57 @@ namespace Lawyer_Project
         {
             pictureBox4.BackColor = Color.Transparent;
         }
-
+        string davaciid;
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            SqlCommand komut1 = new SqlCommand("SELECT DAVACIID FROM TBLDAVACI WHERE DAVACITC=@P1", bgl.baglanti());
+            komut1.Parameters.AddWithValue("@P1", LblTC.Text);
+            SqlDataReader dr = komut1.ExecuteReader();
+            while (dr.Read())
+            {
+                davaciid = dr[0].ToString();
+            }
+            bgl.baglanti().Close();
+
             //Dava gönder
-            SqlCommand komut = new SqlCommand("INSERT INTO TBLDOSYALAR (DAVATUR,DAVACIADSOYAD,DURUM,DAVAFIYAT) VALUES (@P1,@P2,0,@p4)", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("INSERT INTO TBLDOSYALAR (DAVATUR,DAVACIADSOYAD,DURUM,DAVAFIYAT,DAVACIID,DAVACITC) VALUES (@P1,@P2,0,@p4,@p5,@p6)", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", comboBox1.Text);
             komut.Parameters.AddWithValue("@p2", LblAdSoyad.Text);
             komut.Parameters.AddWithValue("@p4", label2.Text);
+            komut.Parameters.AddWithValue("@p5", davaciid);
+            komut.Parameters.AddWithValue("@p6", LblTC.Text);
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
             MessageBox.Show("Davanız kabul edildiğinde davalar tablosundan görüntüleyebileksiniz...");
         }
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmMusteriBilgiGuncelle fr = new FrmMusteriBilgiGuncelle();
+            fr.tc = LblTC.Text;
+            fr.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmMesajMusteri fr = new FrmMesajMusteri();
+            fr.TC = LblTC.Text;
+            fr.ADSOYAD = LblAdSoyad.Text.ToUpper();
+            fr.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
             FrmZiraatMusteri fr = new FrmZiraatMusteri();
             fr.Adsoyad = LblAdSoyad.Text;
             fr.tc = LblTC.Text;
+            fr.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmMusteriTumDavalar fr = new FrmMusteriTumDavalar();
+            fr.TC = LblTC.Text;
             fr.Show();
         }
     }

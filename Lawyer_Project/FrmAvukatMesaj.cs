@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace Lawyer_Project
 {
-    public partial class FrmMesajMusteri : Form
+    public partial class FrmAvukatMesaj : Form
     {
-        public FrmMesajMusteri()
+        public FrmAvukatMesaj()
         {
             InitializeComponent();
         }
+        public string adsoyad;
+        public string tc;
+        sqlbaglantisi bgl = new sqlbaglantisi();
         void listele()
         {
             dataGridView1.RowHeadersVisible = false;
@@ -27,6 +29,19 @@ namespace Lawyer_Project
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].Visible = false;
         }
+
+        private void FrmAvukatMesaj_Load(object sender, EventArgs e)
+        {
+            LblAdSoyad.Text = adsoyad;
+            LblTC.Text = tc;
+            listele();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
         private void pictureBox4_MouseHover(object sender, EventArgs e)
         {
             pictureBox4.BackColor = Color.Red;
@@ -37,9 +52,12 @@ namespace Lawyer_Project
             pictureBox4.BackColor = Color.Transparent;
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            SqlCommand komut = new SqlCommand("INSERT INTO TBLMESAJ (MESAJKONU) VALUES (@P1)", bgl.baglanti());
+            komut.Parameters.AddWithValue("@P1", richTextBox1.Text);
+            komut.ExecuteNonQuery();
+            listele();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -51,23 +69,16 @@ namespace Lawyer_Project
             listele();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SqlCommand komut = new SqlCommand("INSERT INTO TBLMESAJ (MESAJKONU) VALUES (@P1)", bgl.baglanti());
-            komut.Parameters.AddWithValue("@P1", richTextBox1.Text);
-            komut.ExecuteNonQuery();
-            listele();
-        }
-
-        public string TC,ADSOYAD;
-        sqlbaglantisi bgl = new sqlbaglantisi();
-
-
         private void button3_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("TRUNCATE TABLE TBLMESAJ", bgl.baglanti());
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
+            listele();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
             listele();
         }
 
@@ -78,12 +89,7 @@ namespace Lawyer_Project
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-            dataGridView1.Columns[0].Width = 70;
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            listele();
+            dataGridView1.Columns[0].Visible = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -93,13 +99,6 @@ namespace Lawyer_Project
                 textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             }
             catch { }
-        }
-
-        private void FrmMesajMusteri_Load(object sender, EventArgs e)
-        {
-            LblTC.Text = TC;
-            LblAdSoyad.Text = ADSOYAD;
-            listele();
         }
     }
 }

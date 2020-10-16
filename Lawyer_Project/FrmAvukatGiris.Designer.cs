@@ -103,6 +103,7 @@
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(229, 31);
             this.TxtSifre.TabIndex = 1;
+            this.TxtSifre.Text = "3";
             // 
             // button1
             // 
@@ -123,6 +124,7 @@
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(229, 31);
             this.MskTC.TabIndex = 0;
+            this.MskTC.Text = "33333333333";
             this.MskTC.ValidatingType = typeof(int);
             // 
             // FrmAvukatGiris

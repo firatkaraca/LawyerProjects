@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,9 +44,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -122,9 +122,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(280, 136);
+            this.button1.Location = new System.Drawing.Point(273, 127);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 45);
+            this.button1.Size = new System.Drawing.Size(109, 45);
             this.button1.TabIndex = 3;
             this.button1.Text = "İNCELE";
             this.button1.UseVisualStyleBackColor = false;
@@ -132,29 +132,16 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(63, 89);
+            this.comboBox1.Location = new System.Drawing.Point(60, 80);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(209, 32);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.BlanchedAlmond;
-            this.linkLabel1.Location = new System.Drawing.Point(6, 28);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(160, 24);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Bilgilerini Düzenle";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // groupBox2
             // 
@@ -167,7 +154,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(321, 26);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(392, 193);
+            this.groupBox2.Size = new System.Drawing.Size(392, 185);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dava Oluştur";
@@ -175,12 +162,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Window;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(344, 90);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(340, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 31);
             this.label4.TabIndex = 12;
@@ -191,7 +178,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 92);
+            this.label6.Location = new System.Drawing.Point(6, 83);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 24);
             this.label6.TabIndex = 7;
@@ -200,14 +187,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Window;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(273, 90);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(270, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 31);
+            this.label2.Size = new System.Drawing.Size(71, 31);
             this.label2.TabIndex = 11;
             this.label2.Text = "0000";
             // 
@@ -248,64 +235,69 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.linkLabel4);
-            this.groupBox4.Controls.Add(this.linkLabel3);
-            this.groupBox4.Controls.Add(this.linkLabel2);
-            this.groupBox4.Controls.Add(this.linkLabel1);
+            this.groupBox4.Controls.Add(this.button6);
+            this.groupBox4.Controls.Add(this.button5);
+            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(12, 422);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(701, 72);
+            this.groupBox4.Size = new System.Drawing.Size(701, 77);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Hızlı Erişim";
             // 
-            // linkLabel4
+            // button6
             // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel4.LinkColor = System.Drawing.Color.BlanchedAlmond;
-            this.linkLabel4.Location = new System.Drawing.Point(368, 28);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(126, 24);
-            this.linkLabel4.TabIndex = 16;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Ziraat Bankası";
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(526, 21);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(162, 40);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "TÜM DAVALARIM";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // linkLabel3
+            // button5
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.BlanchedAlmond;
-            this.linkLabel3.Location = new System.Drawing.Point(529, 28);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(157, 24);
-            this.linkLabel3.TabIndex = 15;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Uygulamadan Çık";
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(356, 22);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(162, 40);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "ZİRAAT BANKASI";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // linkLabel2
+            // button4
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel2.LinkColor = System.Drawing.Color.BlanchedAlmond;
-            this.linkLabel2.Location = new System.Drawing.Point(204, 28);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(129, 24);
-            this.linkLabel2.TabIndex = 14;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Mesaj Gönder";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(186, 22);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(162, 40);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "MESAJ GÖNDER";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(16, 22);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 40);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "BİLGİLERİNİ DÜZENLE";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // richTextBox1
             // 
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox1.Location = new System.Drawing.Point(6, 19);
+            this.richTextBox1.Location = new System.Drawing.Point(10, 19);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(375, 103);
+            this.richTextBox1.Size = new System.Drawing.Size(371, 113);
             this.richTextBox1.TabIndex = 14;
             this.richTextBox1.Text = "";
             // 
@@ -315,9 +307,9 @@
             this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(321, 229);
+            this.groupBox5.Location = new System.Drawing.Point(321, 217);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(392, 187);
+            this.groupBox5.Size = new System.Drawing.Size(392, 199);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Belge İncele";
@@ -327,10 +319,10 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(21)))), ((int)(((byte)(40)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(279, 128);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.Location = new System.Drawing.Point(270, 142);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 45);
+            this.button2.Size = new System.Drawing.Size(112, 45);
             this.button2.TabIndex = 13;
             this.button2.Text = "GÖNDER";
             this.button2.UseVisualStyleBackColor = false;
@@ -373,7 +365,6 @@
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -386,7 +377,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label LblAdSoyad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LblTC;
@@ -396,13 +386,14 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

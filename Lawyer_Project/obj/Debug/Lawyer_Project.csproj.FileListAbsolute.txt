@@ -18,3 +18,5 @@ C:\Users\firat\source\repos\Lawyer_Project\Lawyer_Project\obj\Debug\Lawyer_Proje
 C:\Users\firat\source\repos\Lawyer_Project\Lawyer_Project\obj\Debug\Lawyer_Project.FrmAvukatDetay.resources
 C:\Users\firat\source\repos\Lawyer_Project\Lawyer_Project\obj\Debug\Lawyer_Project.FrmZiraatMusteri.resources
 C:\Users\firat\source\repos\Lawyer_Project\Lawyer_Project\obj\Debug\Lawyer_Project.FrmAvukatZiraat.resources
+C:\Users\firat\source\repos\Lawyer_Project\Lawyer_Project\obj\Debug\Lawyer_Project.FrmMusteriTumDavalar.resources
+C:\Users\firat\source\repos\Lawyer_Project\Lawyer_Project\obj\Debug\Lawyer_Project.FrmAvukatMesaj.resources
